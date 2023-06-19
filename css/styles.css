@@ -33,6 +33,9 @@ p {
     color: white;
     margin-bottom: 2rem;
 }
+img.img{
+    border-radius: 0.5rem;
+}
 
 /*...................APLICACION DE ESTILOS VERSION MOBILE................... */
 
@@ -87,7 +90,7 @@ p {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        gap: 1em;
+        gap: 1rem;
     }
 
     .li3 {
@@ -114,7 +117,9 @@ p {
         height: 30px;
         width: 30px;
         margin-right: 10px;
-    }
+        }
+
+      
 
     .ul-li {
         display: flex;
@@ -165,7 +170,7 @@ p {
 
 /*................ h1 y barra de navegacion........................... */
 
-@media(min-width: 1024px) and (max-width: 1200px) {
+@media(min-width: 1024px){
     .h1 {
         background-color: black;
         display: flex;
@@ -217,7 +222,7 @@ p {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         overflow: hidden;
-        gap: 1em;
+        gap: 1rem;
     }
 
     .imagen-destacada {
@@ -335,7 +340,7 @@ p {
 
 /* ..........MAIN (resolucion 1024px a 1200px)............ */
 
-@media(min-width: 1024px) and (max-width: 1200px){
+@media(min-width: 1024px) {
 h2.freeclass {
     color: white;
     margin-bottom: 2rem;
@@ -400,3 +405,12 @@ div.div6 {
     font-size: 1.1rem 
 }
 }
+
+/* :::::::::::::::::::::::PAGINA ACTIVIDADES:::::::::::::::::::::: */
+
+/* ---------------SECTION---------------------- */
+/* .imagen-crossfit{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+} */
