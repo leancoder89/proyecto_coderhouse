@@ -33,50 +33,53 @@
     <main>
         <section>
             <h2>CONTACTO</h2>
-            <p>!HOLA¡</p>
+            <p class="p">!HOLA¡</p>
             <p>Escribí tus datos y contanos tu inquietud. Te daremos una respuesta en menos de 24 horas hábiles.</p>
+            <div> 
             <form action="">
-                <div>
+                
+                <div class="informacion">
                     <label for="nombre">ingresar nombre</label>
                     <input type="text" id="nombre" placeholder="NOMBRE">
                 </div>
-                <div>
+                <div class="informacion">
                     <label for="apellido">ingresar apellido</label>
                     <input type="text" id="apellido" placeholder="APELLIDO">
                 </div>
-                <div>
-                    <label for="DNI"> ingresar numero de documento de identidad</label>
+                <div class="informacion">
+                    <label for="DNI"> ingresar DNI</label>
                     <input type="text" id="DNI" placeholder="DNI">
                 </div>
-                <div>
-                    <label for="email">ingresar su correo electronico</label>
+                <div class="informacion">
+                    <label for="email">ingresar EMAIL</label>
                     <input type="email" id="email" placeholder="ejemplo@mail.com">
                 </div>
-                <div>
-                    <label for="provincia">ingrese la privincia donde radica</label>
+                <div class="informacion">
+                    <label for="provincia">ingrese su provincia</label>
                     <input type="text" id="provincia" placeholder="PROVINCIA">
                 </div>
-                <div>
-                    <label for="ciudad">ingrese la ciudad donde radica</label>
+                <div class="informacion">
+                    <label for="ciudad">ingrese su ciudad</label>
                     <input type="text" id="ciudad" placeholder="CIUDAD">
                 </div>
-                <div>
-                    <label for="asunto">seleccione el asunto del mensaje</label>
+                <div class="texto">
+                    <label  for="asunto">asunto del mensaje</label>
                     <select name="" id="asunto">
                         <option value="">consulta</option>
                         <option value="">reclamo</option>
                         <option value="">otros </option>
                     </select>
                 </div>
-                <div>
+                <div class="informacion">
                     <label for="mensaje">ingrese su mensaje</label>
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <div>
-                    <label for="novedades">desea recibir novedades?</label>
+                    <label class="texto" for="novedades">desea recibir novedades?</label>
                     <input type="checkbox" id="novedades">
                 </div>
-                <div>
+            </div>
+                <div class="botones">
                     <input type="submit" value="enviar">
                     <input type="reset" value="limpiar">
                 </div>
@@ -104,7 +107,7 @@
                                 src="../imagenes/facebook.png" alt="logo de facebbok"></a></li>
                 </ul>
             </div>
-            <div class="copyright">
+            <div>
                 <strong class="copyright">© THEEDGE FITNESS | Todos los derechos reservados 2023</strong>
             </div>
         </fieldset>
