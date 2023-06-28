@@ -175,8 +175,8 @@ img.img {
     .h1 {
         background-color: black;
         display: flex;
-        justify-content: center;
-        justify-items: center;
+        justify-content: left;
+        align-items: center;
     }
 
     .theedge {
@@ -191,20 +191,30 @@ img.img {
         display: flex;
         background-color: black;
         font-size: 1.25rem;
-        text-align: center;
-        width: 100px;
+        margin-left: 10px;
+        margin-right: 10px;
+        /* text-align: center; */
+        /* width: 100px; */
+        /* align-items: center;
+        justify-content: right;
+        gap: 2rem; */
     }
 
     nav {
         display: flex;
-        justify-content: space-evenly;
-        justify-items: center;
-        margin-bottom: 50px;
+        /* flex-direction: row;
+        justify-content:end ;
+        align-items: center; */
+        /* margin-bottom: 20px; */
+        /* margin-left: 15%; */
+        /* margin-right: 0; */
     }
 
     ul.nav {
         display: flex;
         flex-direction: row;
+        /* justify-content: right;
+        align-items: center; */
     }
 
     a {
