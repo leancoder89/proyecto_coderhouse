@@ -10,25 +10,24 @@
 </head>
 
 <body>
-    <div class="h1">
-        <a href="../index.html">
-            <h1 class="theedge">THEEDGE<strong class="fitness">FITNESS</strong></h1>
-        </a>
-    </div>
-    <hr>
     <header>
-        <hr>
-        <!-- H1 lo deje fuera del navegador, aunque es linkeable. ¿podria formar parte del navegador poniendolo entre <nav> y <ul>? -->
-        <nav>
-            <ul class="nav">
+        <section class="top-nav" class="h1">
+            <div>
+                <a href="../index.html">
+                    <h1 class="theedge">THEEDGE<strong class="fitness">FITNESS</strong></h1>
+                </a>
+            </div>
+            <input id="menu-toggle" type="checkbox" />
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+            <ul class="menu" class="nav">
                 <li><a href="./actividades.html">Actividades</a> </li>
                 <li><a href="./planes-y-precios.html">Planes y Precios</a></li>
                 <li class="li3"><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./freeclass.html">FREE CLASS</a></li>
-                <!-- FREECLASS esta en mayusculas a proposito para que resalte  -->
             </ul>
-
-        </nav>
+        </section>
     </header>
     <main>
         <section class="imagenes-index">
@@ -43,7 +42,8 @@
             <div class="imagen-2">
                 <h2>CROSSFIT</h2>
                 <!-- en el texto iria una pequeña descripcion de los beneficios de realizar crossfit -->
-                <img class="imagen-crossfit" src="../imagenes/crossfit-pelotaa.jpg" alt="imagen de persona realizando crossfit">
+                <img class="imagen-crossfit" src="../imagenes/crossfit-pelotaa.jpg"
+                    alt="imagen de persona realizando crossfit">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore voluptatem excepturi expedita
                     laboriosam, at nulla ea ducimus dicta, facilis doloremque temporibus libero eaque explicabo cumque
                     ipsam. Aperiam molestiae dolorem dignissimos!</p>
@@ -58,7 +58,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer" >
+    <footer class="footer">
         <fieldset class="footer-actividades">
             <div class="ul-li">
                 <ul>
@@ -69,13 +69,13 @@
             </div>
             <div class="apps">
                 <ul class="li">
-                    <li><a class="a" href="https://www.spotify.com" target="_blank"><img class="img" src="../imagenes/spotify.png"
-                                alt="logo de spotify"></a></li>
-                    <li><a class="a" href="https://www.youtube.com" target="_blank"><img class="img"  src="../imagenes/youtube.png"
-                                alt="logo de youtube"></a></li>
-                    <li><a class="a" href="https://www.instagram.com" target="_blank"><img class="img" 
+                    <li><a class="a" href="https://www.spotify.com" target="_blank"><img class="img"
+                                src="../imagenes/spotify.png" alt="logo de spotify"></a></li>
+                    <li><a class="a" href="https://www.youtube.com" target="_blank"><img class="img"
+                                src="../imagenes/youtube.png" alt="logo de youtube"></a></li>
+                    <li><a class="a" href="https://www.instagram.com" target="_blank"><img class="img"
                                 src="../imagenes/instagram.png" alt="logo de instagram"></a></li>
-                    <li><a class="a" href="https://es-la.facebook.com" target="_blank"><img class="img" 
+                    <li><a class="a" href="https://es-la.facebook.com" target="_blank"><img class="img"
                                 src="../imagenes/facebook.png" alt="logo de facebbok"></a></li>
                 </ul>
             </div>
