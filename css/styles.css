@@ -321,7 +321,7 @@ img.img {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        
+
         gap: 1rem;
     }
 
@@ -332,12 +332,14 @@ img.img {
         margin-bottom: 20px;
     }
 
-    .imagen_crossfit_sogas{
+    .imagen_crossfit_sogas {
         padding-left: 20px;
     }
-.imagen_interior_gimnasio{
-    padding-right: 20px;
-}
+
+    .imagen_interior_gimnasio {
+        padding-right: 20px;
+    }
+
     .h2 {
         color: white;
         margin-left: 20px;
@@ -412,41 +414,77 @@ img.img {
 
 /* .......MAIN (resolucion maxima 480px......... */
 
-@media(max-width:480px) and (orientation:portrait) {
 
-    h2.freeclass {
-        color: white;
-        margin-bottom: 2rem;
-    }
 
-    input.freeclass {
-        background-color: black;
-        border: 2px solid white;
-        display: flex;
-        flex-direction: column;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .submit {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 4rem;
-        width: 30%;
-        border: 2px solid;
-        border-radius: 1rem;
-        height: 2.5rem;
-        font-size: 1.1rem
-    }
+h2.freeclass {
+    color: white;
+    margin-bottom: 2rem;
 }
+
+.contenedor {
+    display: grid;
+
+    grid-template-rows: repeat(6, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    margin: auto auto;
+}
+
+div.div1 {
+    grid-row: 1/1;
+    width: 30%;
+}
+
+div.div2 {
+    grid-row: 2;
+    width: 30%;
+}
+
+div.div3 {
+
+    grid-row: 3;
+    width: 30%;
+}
+
+div.div4 {
+
+    grid-row: 4;
+    width: 30%;
+}
+
+div.div5 {
+
+    grid-row: 5;
+    width: 30%;
+}
+
+div.div6 {
+
+    grid-row: 6;
+    margin-right: 15px;
+
+}
+
+
+.submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto auto;
+    margin-bottom: 19rem;
+    width: 200px;
+    border: 2px solid;
+    border-radius: 1rem;
+    height: 2.5rem;
+    font-size: 1.1rem
+}
+
 
 /* ..........MAIN (resolucion 1024px a 1200px)............ */
 
-@media(min-width: 1024px) {
+@media(min-width: 768px) {
     h2.freeclass {
         color: white;
         margin-bottom: 2rem;
@@ -506,7 +544,7 @@ img.img {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 4rem;
-        width: 30%;
+        width: 200px;
         border: 2px solid;
         border-radius: 1rem;
         height: 2.5rem;
@@ -519,21 +557,24 @@ img.img {
 /* ---------------SECTION---------------------- */
 
 /* version mobile queda ya estructurada con los estilos anteriores */
-@media(min-width: 768px){
-    .imagen-destacada{
-padding-left: 20px;
-padding-right: 20px;
-padding-bottom: 50px;
+@media(min-width: 768px) {
+    .imagen-destacada {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
     }
-    .imagen-2{
+
+    .imagen-2 {
         padding-left: 20px;
         padding-bottom: 150px;
     }
-    .imagen-3{
+
+    .imagen-3 {
         padding-right: 20px;
         padding-bottom: 150px;
     }
 }
+
 @media(min-width: 1024px) {
     .imagen-destacada {
         color: white;
@@ -646,30 +687,59 @@ padding-bottom: 50px;
 /* ::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::: */
 
 /* ............MAIN.................. */
-.section_contacto{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.responsive_imagen {
+    display: none;
 }
-.imagen_contacto{
-    width: 400px;
-    height: 600px;
-    display: grid;
-    grid-column: 2/2;
-    margin: auto auto;
-    margin-bottom: 20px;
+
+@media(min-width: 768px) {
+    .responsive_imagen {
+        display: block;
+    }
+
+    .section_contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .imagen_contacto {
+        width: 400px;
+        height: 600px;
+        display: grid;
+        grid-column: 2/2;
+        margin: auto auto;
+        margin-bottom: 20px;
+    }
+
+    .section_contacto_informacion {
+        display: grid;
+        grid-column: 1/1;
+        grid-row: 1;
+        margin: auto auto;
+    }
 }
-.section_contacto_informacion{
+
+.section_contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.section_contacto_informacion {
     display: grid;
     grid-column: 1/1;
+    grid-row: 1;
     margin: auto auto;
 }
+
 p.p {
     margin-bottom: 0.5rem;
 }
 
 .texto {
     color: white;
-    padding-left: 5rem;
+    padding-top: 1rem;
+    margin: auto auto;
 }
 
 .informacion {
@@ -680,10 +750,6 @@ p.p {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0.5rem;
-}
-
-.informacion1 {
-    margin-right: 30px;
 }
 
 .botones {
