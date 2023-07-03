@@ -419,50 +419,53 @@ img.img {
 h2.freeclass {
     color: white;
     margin-bottom: 2rem;
+   
 }
 
 .contenedor {
     display: grid;
-
-    grid-template-rows: repeat(6, 1fr);
+grid-template-rows: repeat(6, 1fr);
+    justify-content: center;
     justify-items: center;
     align-items: center;
+    align-content: center;
     margin-bottom: 5rem;
-    margin: auto auto;
+    /* margin: auto auto; */
 }
 
 div.div1 {
     grid-row: 1/1;
-    width: 30%;
+     width: 57%;
+    
 }
 
 div.div2 {
     grid-row: 2;
-    width: 30%;
+    width: 57%;
 }
 
 div.div3 {
 
     grid-row: 3;
-    width: 30%;
+    width: 57%;
 }
 
 div.div4 {
 
     grid-row: 4;
-    width: 30%;
+    width: 57%;
 }
 
 div.div5 {
 
     grid-row: 5;
-    width: 30%;
+    width: 57%;
 }
 
 div.div6 {
 
     grid-row: 6;
-    margin-right: 15px;
+    
 
 }
 
@@ -473,12 +476,15 @@ div.div6 {
     justify-content: center;
     align-items: center;
     margin: auto auto;
-    margin-bottom: 19rem;
-    width: 200px;
+    margin-bottom: 7rem;
+    width: 180px;
     border: 2px solid;
     border-radius: 1rem;
     height: 2.5rem;
     font-size: 1.1rem
+    
+    
+
 }
 
 
