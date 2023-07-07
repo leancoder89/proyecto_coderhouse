@@ -11,15 +11,15 @@
 
 <body>
     <header>
-        <section class="top-nav" class="h1">
+        <section class="nav" class="h1">
             <div>
                 <a href="../index.html">
-                    <h1 class="theedge">THEEDGE<strong class="fitness">FITNESS</strong></h1>
+                    <h1 class="color__red">THEEDGE<strong class="color__white">FITNESS</strong></h1>
                 </a>
             </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
+            <input id="menu-variacion"type="checkbox" />
+            <label class="menu__btn--estetica" for="menu-variacion">
+                <div class="menu__btn"></div>
             </label>
             <ul class="menu" class="nav">
                 <li><a href="./actividades.html">Actividades</a> </li>
@@ -33,40 +33,40 @@
         <section >
         
         <h2>CONTACTO</h2>
-        <p class="p">!HOLA¡</p>
+        <p class="contacto__texto">!HOLA¡</p>
         <p>Escribí tus datos y contanos tu inquietud. Te daremos una respuesta en menos de 24 horas hábiles.</p>
-            <div class="section_contacto" >
-                <div class="imagen_contacto">
-                   <img src="../imagenes/mujer_levantando_cubierta.jpg" alt="mujer levantando cubierta de tractor" class="responsive_imagen">
+            <div class="contacto" >
+                <div class="contacto__img">
+                   <img src="../imagenes/mujer_levantando_cubierta.jpg" alt="mujer levantando cubierta de tractor" class="img__responsive">
                 </div >
-                <div class="section_contacto_informacion">
+                <div class="contacto__informacion">
                 <form action="">
 
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="nombre">ingresar nombre</label>
                         <input type="text" id="nombre" placeholder="NOMBRE">
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="apellido">ingresar apellido</label>
                         <input type="text" id="apellido" placeholder="APELLIDO">
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="DNI"> ingresar DNI</label>
                         <input type="text" id="DNI" placeholder="DNI">
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="email">ingresar EMAIL</label>
                         <input type="email" id="email" placeholder="ejemplo@mail.com">
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="provincia">ingrese su provincia</label>
                         <input type="text" id="provincia" placeholder="PROVINCIA">
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="ciudad">ingrese su ciudad</label>
                         <input type="text" id="ciudad" placeholder="CIUDAD">
                     </div>
-                    <div class="texto">
+                    <div class="contacto__label ">
                         <label for="asunto">asunto del mensaje</label>
                         <select name="" id="asunto">
                             <option value="">consulta</option>
@@ -74,12 +74,12 @@
                             <option value="">otros </option>
                         </select>
                     </div>
-                    <div class="informacion">
+                    <div class="contacto_form">
                         <label for="mensaje">ingrese su mensaje</label>
                         <textarea name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <div>
-                        <label class="texto" for="novedades">desea recibir novedades?</label>
+                        <label class="contacto__label " for="novedades">desea recibir novedades?</label>
                         <input type="checkbox" id="novedades">
                     </div>
                     <div class="botones">
@@ -94,27 +94,29 @@
     </main>
     <footer class="footer">
         <fieldset>
-            <div class="ul-li">
+            <div class="footer__lista">
                 <ul>
-                    <li class="li">¿quienes somos?</li>
-                    <li class="li">trabaja con nosotros</li>
-                    <li class="li">contacto</li>
+                    <li class="footer__lista--item">¿quienes somos?</li>
+                    <li class="footer__lista--item">trabaja con nosotros</li>
+                    <li class="footer__lista--item">contacto</li>
                 </ul>
             </div>
-            <div class="apps">
-                <ul class="li">
-                    <li><a class="a" href="https://www.spotify.com" target="_blank"><img class="img"
+            <div class="footer__aplicaciones">
+                <ul class="footer__lista--item">
+                    <li><a class="footer__link " href="https://www.spotify.com" target="_blank"><img class="footer__aplicaciones"
                                 src="../imagenes/spotify.png" alt="logo de spotify"></a></li>
-                    <li><a class="a" href="https://www.youtube.com" target="_blank"><img class="img"
+                    <li><a class="footer__link " href="https://www.youtube.com" target="_blank"><img class="footer__aplicaciones"
                                 src="../imagenes/youtube.png" alt="logo de youtube"></a></li>
-                    <li><a class="a" href="https://www.instagram.com" target="_blank"><img class="img"
+                    <li><a class="footer__link " href="https://www.instagram.com" target="_blank"><img class="footer__aplicaciones"
                                 src="../imagenes/instagram.png" alt="logo de instagram"></a></li>
-                    <li><a class="a" href="https://es-la.facebook.com" target="_blank"><img class="img"
+                    <li><a class="footer__link " href="https://es-la.facebook.com" target="_blank"><img class="footer__aplicaciones"
                                 src="../imagenes/facebook.png" alt="logo de facebbok"></a></li>
+                                <li><a class="footer__link " href="https://twitter.com" target="_blank"><img class="footer__aplicaciones"
+                                    src="../imagenes/twitter.jpg" alt="logo de twitter"></a></li>
                 </ul>
             </div>
             <div>
-                <strong class="copyright">© THEEDGE FITNESS | Todos los derechos reservados 2023</strong>
+                <strong class="footer__copyright">© THEEDGE FITNESS | Todos los derechos reservados 2023</strong>
             </div>
         </fieldset>
     </footer>

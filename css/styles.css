@@ -10,31 +10,32 @@ ul {
 
 a {
     text-decoration: none;
+    
 }
-a:hover{
+
+a:hover {
     background-color: red;
     color: #000000;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-
-h2 {
-    vertical-align: center;
-    text-align: center;
+.color__red {
+    color: red;
 }
 
-html,
+.color__white {
+    color: white;
+}
+.main__maxwhidt {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
 body {
-    margin: 0;
-    height: 100%;
+    background-color: #000000;
 }
 
-* {
-    font-family: "Raleway";
-    box-sizing: border-box;
-}
-
-.top-nav {
+.nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,7 +58,7 @@ body {
     overflow: hidden;
 }
 
-.menu-button-container {
+.menu__btn--estetica {
     display: none;
     height: 100%;
     width: 30px;
@@ -67,13 +68,13 @@ body {
     align-items: center;
 }
 
-#menu-toggle {
+#menu-variacion {
     display: none;
 }
 
-.menu-button,
-.menu-button::before,
-.menu-button::after {
+.menu__btn,
+.menu__btn::before,
+.menu__btn::after {
     display: block;
     background-color: #fff;
     position: absolute;
@@ -83,32 +84,32 @@ body {
     border-radius: 2px;
 }
 
-.menu-button::before {
+.menu__btn::before {
     content: '';
     margin-top: -8px;
 }
 
-.menu-button::after {
+.menu__btnn::after {
     content: '';
     margin-top: 8px;
 }
 
-#menu-toggle:checked+.menu-button-container .menu-button::before {
+#menu-variacion:checked+.menu__btn--estetica .menu__btn::before {
     margin-top: 0px;
     transform: rotate(405deg);
 }
 
-#menu-toggle:checked+.menu-button-container .menu-button {
+#menu-variacione:checked+.menu__btn--estetica .menu__btn {
     background: rgb(0, 0, 0);
 }
 
-#menu-toggle:checked+.menu-button-container .menu-button::after {
+#menu-variacion:checked+.menu__btn--estetica .menu__btn::after {
     margin-top: 0px;
     transform: rotate(-405deg);
 }
 
 @media (max-width: 1024px) {
-    .menu-button-container {
+    .menu__btn--estetica {
         display: flex;
     }
 
@@ -123,7 +124,7 @@ body {
         align-items: center;
     }
 
-    #menu-toggle~.menu li {
+    #menu-variacion~.menu li {
         height: 0;
         margin: 0;
         padding: 0;
@@ -131,7 +132,7 @@ body {
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
     }
 
-    #menu-toggle:checked~.menu li {
+    #menu-variacion:checked~.menu li {
         border: 1px solid #000000;
         height: 2.5em;
         padding: 0.5em;
@@ -162,20 +163,17 @@ img {
     margin-bottom: 10px;
 }
 
-body {
-    background-color: black;
-}
 
-h2 {
+/* h2 {
     color: white;
-}
+} */
 
 p {
     color: white;
     margin-bottom: 2rem;
 }
 
-img.img {
+.footer__aplicaciones {
     border-radius: 0.5rem;
 }
 
@@ -185,32 +183,30 @@ img.img {
 
     /* ...........H1 Y BARRA DE NAVEGACION ................*/
 
-    .h1 {
+    /* .h1 {
         background-color: black;
-    }
+    } */
 
-    .theedge {
+    /* .theedge {
         color: red;
     }
 
     .fitness {
         color: white;
-    }
+    } */
 
 
     a {
         text-decoration: none;
         color: red;
-        display: flex;
-    }
+    display: flex;
+      }
 
-    .li3 {
-        width: 80px;
-    }
+
 
     /*................. SECTION.................... */
 
-    .imagenes-index {
+    .index__imgs {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -218,10 +214,10 @@ img.img {
     }
 
 
-    .h2 {
+    /* .h2 {
         color: white;
         margin-left: 20px;
-    }
+    } */
 
     /* .................IFRAME....................... */
 
@@ -233,16 +229,13 @@ img.img {
     }
 
     /* ................FOOTER...................... */
-
-    .a {
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
+    .footer {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: 80% 20%;
     }
 
-
-
-    .ul-li {
+    .footer__lista {
         display: flex;
         flex-direction: column;
         padding: 5px;
@@ -252,18 +245,15 @@ img.img {
         grid-row: 1/1;
     }
 
-    .copyright {
-        width: auto;
-        color: white;
-        display: grid;
-        justify-content: space-around;
-        grid-column: 1/2;
-        grid-row: 2/2;
+    .footer__lista--item {
+        display: flex;
+        flex-direction: row;
     }
 
-    .apps {
-        grid-column: 2/2;
-        grid-row: 1/1;
+    .footer__link {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
     }
 
     fieldset {
@@ -275,16 +265,27 @@ img.img {
         grid-row: span 2;
     }
 
-    .footer {
+  
+
+    .footer__copyright {
+        width: auto;
+        color: white;
         display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 80% 20%;
+        justify-content: space-around;
+        grid-column: 1/2;
+        grid-row: 2/2;
     }
 
-    .li {
-        display: flex;
-        flex-direction: row;
+    .footer__aplicaciones {
+        grid-column: 2/2;
+        grid-row: 1/1;
     }
+
+  
+
+   
+
+    
 }
 
 /*................................. APLICACION DE ESTILOS VERSION DESKTOP......................... */
@@ -293,62 +294,62 @@ img.img {
 
 @media(min-width: 768px) {
 
-    .section_main_footer {
-        max-width: 1400px;
-        margin: 0 auto;
-    }
-
-    .h1 {
+ 
+    /* .h1 {
         background-color: black;
     
-    }
+    } */
 
-    .theedge {
+    /* .theedge {
         color: red;
     }
 
     .fitness {
         color: white;
-    }
+    } */
 
     a {
         text-decoration: none;
         color: red;
     }
 
-    .li3 {
-        width: 80px;
-    }
 
     /* ............................SECTION .............................*/
 
-    .imagenes-index {
+    .index__imgs {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-
         gap: 1rem;
     }
 
-    .imagen-destacada {
-        color: white;
+    .index__img--destacada {
+        /* color: white; */
         grid-column: span 2;
         grid-row: 1/1;
         margin-bottom: 20px;
     }
 
-    .imagen_crossfit_sogas {
+    .index__img--precios {
         padding-left: 20px;
     }
 
-    .imagen_interior_gimnasio {
+
+    .index__img--freeclass {
         padding-right: 20px;
     }
+    /* h2.planesyprecios{
+        padding-left: 20px;
+    } */
 
-    .h2 {
-        color: white;
+    /* h2{
         margin-left: 20px;
-    }
+    } */
+
+    /* .h2 {
+        color: white;
+        
+    } */
 
     /* * .............................IFRAME ................................* */
 
@@ -362,14 +363,14 @@ img.img {
 
     /* ................................FOOTER................................... */
 
-    a.a {
+    .footer__link {
         display: flex;
         height: 30px;
         width: 30px;
         margin-right: 10px;
     }
 
-    .ul-li {
+    .footer__lista {
         display: flex;
         flex-direction: column;
         padding: 5px;
@@ -378,7 +379,7 @@ img.img {
         grid-row: 1/1;
     }
 
-    .copyright {
+    .footer__copyright {
         width: auto;
         color: white;
         display: grid;
@@ -387,7 +388,7 @@ img.img {
         margin-top: 20px;
     }
 
-    .apps {
+    .footer__aplicaciones {
         grid-column: 2/2;
         grid-row: 1/1;
         display: grid;
@@ -409,7 +410,7 @@ img.img {
         grid-template-rows: 80% 20%;
     }
 
-    ul.li {
+    .footer__lista--item {
         display: flex;
         flex-direction: row;
     }
@@ -424,12 +425,12 @@ img.img {
 h2.freeclass {
     color: white;
     margin-bottom: 2rem;
-   
+
 }
 
 .contenedor {
     display: grid;
-grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     justify-content: center;
     justify-items: center;
     align-items: center;
@@ -438,44 +439,44 @@ grid-template-rows: repeat(6, 1fr);
     /* margin: auto auto; */
 }
 
-div.div1 {
+.contenedor__nombre {
     grid-row: 1/1;
-     width: 57%;
-    
+    width: 57%;
+
 }
 
-div.div2 {
+.contenedor__apellido {
     grid-row: 2;
     width: 57%;
 }
 
-div.div3 {
+.contenedor__dni {
 
     grid-row: 3;
     width: 57%;
 }
 
-div.div4 {
+.contenedor__email {
 
     grid-row: 4;
     width: 57%;
 }
 
-div.div5 {
+.contenedor__telefono {
 
     grid-row: 5;
     width: 57%;
 }
 
-div.div6 {
+.contenedor__camposobligatorios {
 
     grid-row: 6;
-    
+
 
 }
 
 
-.submit {
+.btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -487,9 +488,6 @@ div.div6 {
     border-radius: 1rem;
     height: 2.5rem;
     font-size: 1.1rem
-    
-    
-
 }
 
 
@@ -510,57 +508,44 @@ div.div6 {
         margin-bottom: 5rem;
     }
 
-    div.div1 {
+    .contenedor__nombre {
         grid-column: 1/1;
         grid-row: 1/1;
         width: 30%;
     }
 
-    div.div2 {
+    .contenedor__apellido {
         grid-column: 1/1;
         grid-row: 2/span 1;
         width: 30%;
     }
 
-    div.div3 {
+    .contenedor__dni {
         grid-column: 2/2;
         grid-row: 1/2;
         width: 30%;
     }
 
-    div.div4 {
+    .contenedor__email{
         grid-column: 2/2;
         grid-row: 2/2;
         width: 30%;
     }
 
-    div.div5 {
+    .contenedor__telefono {
         grid-column: 1/1;
         grid-row: 3;
         width: 30%;
     }
 
-    div.div6 {
+    .contenedor__camposobligatorios {
         grid-column: 2/2;
         grid-row: 3;
         margin-right: 15px;
 
     }
 
-    .submit {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 4rem;
-        width: 200px;
-        border: 2px solid;
-        border-radius: 1rem;
-        height: 2.5rem;
-        font-size: 1.1rem
-    }
+ 
 }
 
 /* :::::::::::::::::::::::PAGINA ACTIVIDADES:::::::::::::::::::::: */
@@ -569,58 +554,37 @@ div.div6 {
 
 /* version mobile queda ya estructurada con los estilos anteriores */
 @media(min-width: 768px) {
-    .imagen-destacada {
+    .index__img--destacada {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 50px;
     }
 
-    .imagen-2 {
+    .index__img--crossfit {
         padding-left: 20px;
         padding-bottom: 150px;
     }
 
-    .imagen-3 {
+    .index__img--natacion {
         padding-right: 20px;
         padding-bottom: 150px;
     }
 }
 
-@media(min-width: 1024px) {
-    .imagen-destacada {
-        color: white;
-        grid-column: span 2;
-        grid-row: 1/1;
-        /* margin-bottom: 100px; */
-    }
 
-    .imagen-2 {
-        grid-column: 1/1;
-        grid-row: 2;
-        margin-bottom: 150px;
-    }
-
-    .imagen-3 {
-        grid-column: 2/2;
-        grid-row: 2;
-        margin-bottom: 150px;
-    }
-}
 
 /* :::::::::::::::::::PAGINA PLANES Y PRECIOS::::::::::::::::: */
 
 /* SE HACE ESTILO UNICO, PARA LA 3ER ENTREGA LA HAGO RESPONSIVE */
-.strong {
-    color: white;
-}
 
-.planes-y-precios {
+
+/* .planes-y-precios {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
-}
+} */
 
-.fieldset1 {
+.planA {
     display: grid;
     grid-row: 3;
     margin-bottom: 20px;
@@ -630,7 +594,7 @@ div.div6 {
     margin-right: auto;
 }
 
-.fieldset2 {
+.planB {
     display: grid;
     grid-row: 4;
     margin-bottom: 20px;
@@ -640,7 +604,7 @@ div.div6 {
     margin-right: auto;
 }
 
-.fieldset3 {
+.planC {
     display: grid;
     grid-row: 6;
     text-align: center;
@@ -649,97 +613,99 @@ div.div6 {
     margin-right: auto;
 }
 
-.fieldset4 {
+.horarios {
     margin-bottom: 20px;
     margin-top: 20px;
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+
 }
 
-.edge-basic {
+.planA__basic {
     margin-bottom: 30px;
 }
 
-.edge-silver {
+.planB__silver {
     grid-row: 1;
     margin-bottom: 30px;
 }
 
-.edge-gold {
+.planC__gold {
     grid-row: 1;
     margin-bottom: 30px;
 }
 
-.p1 {
+.plan__gimnasio {
     grid-row: 2;
 }
 
-.p1-1 {
+/* .plan__gimnasio {
     grid-row: 2;
-}
+} */
 
-.p1-2 {
+/* .plan__crossfit {
     grid-row: 2;
-}
+} */
 
-.p2 {
+.plan__crossfit {
     grid-row: 3;
 }
 
-.p2-1 {
+/* .plan__gimnasio {
     grid-row: 3;
-}
+} */
 
-.p2-2 {
+/* .plan__crossfit {
     grid-row: 3;
-}
+} */
 
-.p3 {
+.plan__cuotas {
     grid-row: 4;
 }
 
-.p3-1 {
+/* .plan__cuotas {
     grid-row: 4;
-}
+} */
 
-.p4 {
+.plan__profesor {
     grid-row: 5;
 }
 
-.p5 {
+.plan__natatorio {
     grid-row: 6;
 }
 
 /* ::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::: */
 
 /* ............MAIN.................. */
-.responsive_imagen {
+.img__responsive {
     display: none;
 }
 
 @media(min-width: 768px) {
-    .responsive_imagen {
+    .img__responsive {
         display: block;
     }
 
-    .section_contacto {
+    .contacto {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
 
-    .imagen_contacto {
+    .contacto__img {
         width: 400px;
         height: 600px;
         display: grid;
         grid-column: 2/2;
-        
+
         margin-right: 10vw;
         margin-bottom: 20px;
     }
 
-    .section_contacto_informacion {
+    .contacto__informacion {
         display: grid;
         grid-column: 1/1;
         grid-row: 1;
@@ -747,30 +713,30 @@ div.div6 {
     }
 }
 
-.section_contacto {
+.contacto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
 }
 
-.section_contacto_informacion {
+.contacto__informacion {
     display: grid;
     grid-column: 1/1;
     grid-row: 1;
     margin: auto auto;
 }
 
-p.p {
+.contacto__texto {
     margin-bottom: 0.5rem;
 }
 
-.texto {
+.contacto__label {
     color: white;
     padding-top: 1rem;
     margin: auto auto;
 }
 
-.informacion {
+.contacto_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -780,7 +746,7 @@ p.p {
     margin-bottom: 0.5rem;
 }
 
-.botones {
+/* .botones {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -789,4 +755,4 @@ p.p {
     margin-right: auto;
     margin-top: 1rem;
     margin-bottom: 1rem;
-}
+} */
