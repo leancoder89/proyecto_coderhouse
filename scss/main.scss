@@ -1,6 +1,12 @@
 /* font-family: 'Bacasime Antique', serif;
 font-family: 'Rubik', sans-serif; */
 
+$color-n: black;
+$color-r: red;
+$color-b: white;
+$font-s: 'Bacasime Antique', serif;
+$font-ss: 'Rubik', sans-serif;
+
 * {
     margin: 0;
     padding: 0;
@@ -11,37 +17,58 @@ ul {
     list-style: none;
 }
 
-a {
-    text-decoration: none;
-
-}
-
-a:hover {
-    background-color: red;
-    color: #000000;
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 p {
-    font-family: 'Bacasime Antique', serif;
+    color: $color-b;
+    margin-bottom: 2rem;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        background-color: $color-r;
+        color: $color-n;
+    }
+}
+
+
+p {
+    font-family: $font-s;
     font-weight: 400;
 }
 
 h1 {
-    font-family: 'Rubik', sans-serif;
+    font-family: $font-ss;
     font-weight: 600;
 }
 
 h2 {
-    font-family: 'Rubik', sans-serif;
+    font-family: $font-ss;
+    color: $color-b;
 
+    &.freeclass {
+        color: $color-b;
+        margin-bottom: 2rem;
+    }
+}
+
+.color__black {
+    color: $color-n;
 }
 
 .color__red {
-    color: red;
+    color: $color-r;
 }
 
 .color__white {
-    color: white;
+    color: $color-b;
 }
 
 .main__maxwhidt {
@@ -49,11 +76,10 @@ h2 {
     margin: 0 auto;
 }
 
-
 body {
-    background-color: #000000;
+    background-color: $color-n;
 }
-
+// :::::::::::BARRA DE NAVEGACION::::::::::::::::
 .nav {
     display: flex;
     flex-direction: row;
@@ -175,22 +201,62 @@ body {
 
 /* ------------------------INDEX-------------------------------- */
 
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 10px;
+/* ................FOOTER...................... */
+.footer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 80% 20%;
+
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin-bottom: 20px;
+        color: $color-b;
+        grid-column: 1/1;
+        grid-row: 1/1;
+
+        &--item {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        display: flex;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    &__copyright {
+        width: auto;
+        color: $color-b;
+        display: grid;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 2/2;
+        margin-top: 20px;
+    }
+
+    &__aplicaciones {
+        display: grid;
+        grid-column: 2/2;
+        grid-row: 1/1;
+        border-radius: 0.5rem;
+        justify-content: end;
+    }
 }
 
-
-p {
-    color: white;
-    margin-bottom: 2rem;
+fieldset {
+    border: 4px solid $color-r;
+    background-color: $color-n;
+    padding: 10px;
+    display: grid;
+    grid-column: span 2;
+    grid-row: span 2;
 }
 
-.footer__aplicaciones {
-    border-radius: 0.5rem;
-}
 
 /*...................APLICACION DE ESTILOS VERSION MOBILE................... */
 
@@ -198,18 +264,15 @@ p {
 
     /* ...........H1 Y BARRA DE NAVEGACION ................*/
 
-
     a {
         text-decoration: none;
-        color: red;
+        color: $color-r;
         display: flex;
     }
 
-
-
     /*................. SECTION.................... */
 
-    .index__imgs {
+    .section__imagenes {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -224,59 +287,6 @@ p {
         width: 100vw;
         height: 10vh;
     }
-
-    /* ................FOOTER...................... */
-    .footer {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 80% 20%;
-    }
-
-    .footer__lista {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-        margin-bottom: 20px;
-        color: white;
-        grid-column: 1/1;
-        grid-row: 1/1;
-    }
-
-    .footer__lista--item {
-        display: flex;
-        flex-direction: row;
-    }
-
-    .footer__link {
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-    }
-
-    fieldset {
-        border: 4px solid red;
-        background-color: black;
-        padding: 10px;
-        display: grid;
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-
-
-    .footer__copyright {
-        width: auto;
-        color: white;
-        display: grid;
-        justify-content: space-around;
-        grid-column: 1/2;
-        grid-row: 2/2;
-    }
-
-    .footer__aplicaciones {
-        grid-column: 2/2;
-        grid-row: 1/1;
-    }
 }
 
 /*................................. APLICACION DE ESTILOS VERSION DESKTOP......................... */
@@ -285,35 +295,36 @@ p {
 
 @media(min-width: 768px) {
 
-
     a {
         text-decoration: none;
-        color: red;
+        color: $color-r;
     }
-
 
     /* ............................SECTION .............................*/
 
-    .index__imgs {
+    .section__imagenes {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 1rem;
+
+        &--destacada {
+            grid-column: span 2;
+            grid-row: 1/1;
+            margin-bottom: 20px;
+        }
+
+        &--precios {
+            padding-left: 20px;
+        }
+
+        &--freeclass {
+            padding-right: 20px;
+        }
     }
 
-    .index__img--destacada {
-        grid-column: span 2;
-        grid-row: 1/1;
-        margin-bottom: 20px;
-    }
-
-    .index__img--precios {
-        padding-left: 20px;
-    }
-
-
-    .index__img--freeclass {
-        padding-right: 20px;
+    .section__precios {
+        margin-left: 20px;
     }
 
     /* * .............................IFRAME ................................* */
@@ -323,75 +334,13 @@ p {
         margin-bottom: 10px;
         width: 100vw;
         height: 20vh;
-        max-width: 1400px;
-    }
-
-    /* ................................FOOTER................................... */
-
-    .footer__link {
-        display: flex;
-        height: 30px;
-        width: 30px;
-        margin-right: 10px;
-    }
-
-    .footer__lista {
-        display: flex;
-        flex-direction: column;
-        padding: 5px;
-        color: white;
-        grid-column: 1/1;
-        grid-row: 1/1;
-    }
-
-    .footer__copyright {
-        width: auto;
-        color: white;
-        display: grid;
-        grid-column: 1/2;
-        grid-row: 2/2;
-        margin-top: 20px;
-    }
-
-    .footer__aplicaciones {
-        grid-column: 2/2;
-        grid-row: 1/1;
-        display: grid;
-        justify-content: end;
-    }
-
-    fieldset {
-        border: 4px solid red;
-        background-color: black;
-        padding: 10px;
-        display: grid;
-        grid-column: span 2;
-        grid-row: span 2;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: 60% 40%;
-        grid-template-rows: 80% 20%;
-    }
-
-    .footer__lista--item {
-        display: flex;
-        flex-direction: row;
+        max-width: 1300px;
     }
 }
 
 /* ------------------------------PAGINA FREECLASS----------------------------- */
 
 /* .......MAIN (resolucion maxima 480px......... */
-
-
-
-h2.freeclass {
-    color: white;
-    margin-bottom: 2rem;
-
-}
 
 .contenedor {
     display: grid;
@@ -401,43 +350,36 @@ h2.freeclass {
     align-items: center;
     align-content: center;
     margin-bottom: 5rem;
-    /* margin: auto auto; */
+
+    &__nombre {
+        grid-row: 1/1;
+        width: 57%;
+    }
+
+    &__apellido {
+        grid-row: 2;
+        width: 57%;
+    }
+
+    &__dni {
+        grid-row: 3;
+        width: 57%;
+    }
+
+    &__email {
+        grid-row: 4;
+        width: 57%;
+    }
+
+    &__telefono {
+        grid-row: 5;
+        width: 57%;
+    }
+
+    &__camposobligatorios {
+        grid-row: 6;
+    }
 }
-
-.contenedor__nombre {
-    grid-row: 1/1;
-    width: 57%;
-
-}
-
-.contenedor__apellido {
-    grid-row: 2;
-    width: 57%;
-}
-
-.contenedor__dni {
-
-    grid-row: 3;
-    width: 57%;
-}
-
-.contenedor__email {
-
-    grid-row: 4;
-    width: 57%;
-}
-
-.contenedor__telefono {
-
-    grid-row: 5;
-    width: 57%;
-}
-
-.contenedor__camposobligatorios {
-
-    grid-row: 6;
-}
-
 
 .btn {
     display: flex;
@@ -457,10 +399,6 @@ h2.freeclass {
 /* ..........MAIN (resolucion 1024px a 1200px)............ */
 
 @media(min-width: 768px) {
-    h2.freeclass {
-        color: white;
-        margin-bottom: 2rem;
-    }
 
     .contenedor {
         display: grid;
@@ -469,44 +407,45 @@ h2.freeclass {
         justify-items: center;
         align-items: center;
         margin-bottom: 5rem;
+
+        &__nombre {
+            grid-column: 1/1;
+            grid-row: 1/1;
+            width: 30%;
+        }
+
+        &__apellido {
+            grid-column: 1/1;
+            grid-row: 2/span 1;
+            width: 30%;
+        }
+
+        &__dni {
+            grid-column: 2/2;
+            grid-row: 1/2;
+            width: 30%;
+        }
+
+        &__email {
+            grid-column: 2/2;
+            grid-row: 2/2;
+            width: 30%;
+        }
+
+        &__telefono {
+            grid-column: 1/1;
+            grid-row: 3;
+            width: 30%;
+        }
+
+        &__camposobligatorios {
+            grid-column: 2/2;
+            grid-row: 3;
+            margin-right: 15px;
+        }
     }
 
-    .contenedor__nombre {
-        grid-column: 1/1;
-        grid-row: 1/1;
-        width: 30%;
-    }
 
-    .contenedor__apellido {
-        grid-column: 1/1;
-        grid-row: 2/span 1;
-        width: 30%;
-    }
-
-    .contenedor__dni {
-        grid-column: 2/2;
-        grid-row: 1/2;
-        width: 30%;
-    }
-
-    .contenedor__email {
-        grid-column: 2/2;
-        grid-row: 2/2;
-        width: 30%;
-    }
-
-    .contenedor__telefono {
-        grid-column: 1/1;
-        grid-row: 3;
-        width: 30%;
-    }
-
-    .contenedor__camposobligatorios {
-        grid-column: 2/2;
-        grid-row: 3;
-        margin-right: 15px;
-
-    }
 
 
 }
@@ -517,18 +456,18 @@ h2.freeclass {
 
 /* version mobile queda ya estructurada con los estilos anteriores */
 @media(min-width: 768px) {
-    .index__img--destacada {
+    .section__imagenes--destacada {
         padding-left: 20px;
         padding-right: 20px;
         padding-bottom: 50px;
     }
 
-    .index__img--crossfit {
+    .section__imagenes--crossfit {
         padding-left: 20px;
         padding-bottom: 150px;
     }
 
-    .index__img--natacion {
+    .section__imagenes--natacion {
         padding-right: 20px;
         padding-bottom: 150px;
     }
@@ -548,6 +487,10 @@ h2.freeclass {
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+
+    &__basic {
+        margin-bottom: 30px;
+    }
 }
 
 .planB {
@@ -558,6 +501,11 @@ h2.freeclass {
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+
+    &__silver {
+        grid-row: 1;
+        margin-bottom: 30px;
+    }
 }
 
 .planC {
@@ -567,6 +515,11 @@ h2.freeclass {
     max-width: 768px;
     margin-left: auto;
     margin-right: auto;
+
+    &__gold {
+        grid-row: 1;
+        margin-bottom: 30px;
+    }
 }
 
 .horarios {
@@ -577,20 +530,6 @@ h2.freeclass {
     margin-right: auto;
     text-align: center;
 
-}
-
-.planA__basic {
-    margin-bottom: 30px;
-}
-
-.planB__silver {
-    grid-row: 1;
-    margin-bottom: 30px;
-}
-
-.planC__gold {
-    grid-row: 1;
-    margin-bottom: 30px;
 }
 
 .plan__gimnasio {
@@ -629,23 +568,22 @@ h2.freeclass {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-    }
 
-    .contacto__img {
-        width: 400px;
-        height: 600px;
-        display: grid;
-        grid-column: 2/2;
+        &__img {
+            width: 400px;
+            height: 600px;
+            display: grid;
+            grid-column: 2/2;
+            margin-right: 10vw;
+            margin-bottom: 20px;
+        }
 
-        margin-right: 10vw;
-        margin-bottom: 20px;
-    }
-
-    .contacto__informacion {
-        display: grid;
-        grid-column: 1/1;
-        grid-row: 1;
-        margin: auto auto;
+        &__informacion {
+            display: grid;
+            grid-column: 1/1;
+            grid-row: 1;
+            margin: auto auto;
+        }
     }
 }
 
@@ -653,31 +591,38 @@ h2.freeclass {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+
+    &_informacion {
+        display: grid;
+        grid-column: 1/1;
+        grid-row: 1;
+        margin: auto auto;
+    }
+
+    &__texto {
+        margin-bottom: 0.5rem;
+    }
+
+    &__label {
+        color: $color-b;
+        padding-top: 1rem;
+        margin: auto auto;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+    }
 }
 
-.contacto__informacion {
-    display: grid;
-    grid-column: 1/1;
-    grid-row: 1;
-    margin: auto auto;
-}
 
-.contacto__texto {
-    margin-bottom: 0.5rem;
-}
 
-.contacto__label {
-    color: white;
-    padding-top: 1rem;
-    margin: auto auto;
-}
 
-.contacto_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5rem;
-}
+
+
+
