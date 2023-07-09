@@ -183,7 +183,6 @@ body {
     border-bottom: 1px solid #444;
   }
 }
-/* ------------------------INDEX-------------------------------- */
 /* ................FOOTER...................... */
 .footer {
   display: grid;
@@ -235,6 +234,7 @@ fieldset {
   grid-row: span 2;
 }
 
+/* ------------------------INDEX-------------------------------- */
 /*...................APLICACION DE ESTILOS VERSION MOBILE................... */
 @media (max-width: 768px) {
   /* ...........H1 Y BARRA DE NAVEGACION ................*/
@@ -296,7 +296,7 @@ fieldset {
   }
 }
 /* ------------------------------PAGINA FREECLASS----------------------------- */
-/* .......MAIN (resolucion maxima 480px......... */
+/* ...........................MAIN.............................. */
 .contenedor {
   display: grid;
   grid-template-rows: repeat(6, 1fr);
@@ -344,7 +344,7 @@ fieldset {
   font-size: 1.1rem;
 }
 
-/* ..........MAIN (resolucion 1024px a 1200px)............ */
+/* .......................MAIN....................... */
 @media (min-width: 768px) {
   .contenedor {
     display: grid;
@@ -404,7 +404,6 @@ fieldset {
   }
 }
 /* :::::::::::::::::::PAGINA PLANES Y PRECIOS::::::::::::::::: */
-/* SE HACE ESTILO UNICO, PARA LA 3ER ENTREGA LA HAGO RESPONSIVE */
 .planA {
   display: grid;
   grid-row: 3;

@@ -1,0 +1,67 @@
+/* ::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::: */
+
+/* ............MAIN.................. */
+.img__responsive {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .img__responsive {
+        display: block;
+    }
+
+    .contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+
+        &__img {
+            width: 400px;
+            height: 600px;
+            display: grid;
+            grid-column: 2/2;
+            margin-right: 10vw;
+            margin-bottom: 20px;
+        }
+
+        &__informacion {
+            display: grid;
+            grid-column: 1/1;
+            grid-row: 1;
+            margin: auto auto;
+        }
+    }
+}
+
+.contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    &_informacion {
+        display: grid;
+        grid-column: 1/1;
+        grid-row: 1;
+        margin: auto auto;
+    }
+
+    &__texto {
+        margin-bottom: 0.5rem;
+    }
+
+    &__label {
+        color: $color-b;
+        padding-top: 1rem;
+        margin: auto auto;
+    }
+
+    &_form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+    }
+}

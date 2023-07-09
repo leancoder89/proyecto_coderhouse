@@ -1,0 +1,55 @@
+/* ................FOOTER...................... */
+.footer {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 80% 20%;
+
+    &__lista {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        margin-bottom: 20px;
+        color: $color-b;
+        grid-column: 1/1;
+        grid-row: 1/1;
+
+        &--item {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        display: flex;
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    &__copyright {
+        width: auto;
+        color: $color-b;
+        display: grid;
+        align-items: center;
+        grid-column: 1/2;
+        grid-row: 2/2;
+        margin-top: 20px;
+    }
+
+    &__aplicaciones {
+        display: grid;
+        grid-column: 2/2;
+        grid-row: 1/1;
+        border-radius: 0.5rem;
+        justify-content: end;
+    }
+}
+
+fieldset {
+    border: 4px solid $color-r;
+    background-color: $color-n;
+    padding: 10px;
+    display: grid;
+    grid-column: span 2;
+    grid-row: span 2;
+}

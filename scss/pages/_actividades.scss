@@ -1,0 +1,22 @@
+/* :::::::::::::::::::::::PAGINA ACTIVIDADES:::::::::::::::::::::: */
+
+/* ---------------SECTION---------------------- */
+
+/* version mobile queda ya estructurada con los estilos anteriores */
+@media(min-width: 768px) {
+    .section__imagenes--destacada {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .section__imagenes--crossfit {
+        padding-left: 20px;
+        padding-bottom: 150px;
+    }
+
+    .section__imagenes--natacion {
+        padding-right: 20px;
+        padding-bottom: 150px;
+    }
+}
