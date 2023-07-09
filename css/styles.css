@@ -20,6 +20,7 @@ img {
 p {
   color: white;
   margin-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
 a {
@@ -188,6 +189,7 @@ body {
   display: grid;
   grid-template-columns: 60% 40%;
   grid-template-rows: 80% 20%;
+  margin-top: 10px;
 }
 .footer__lista {
   display: flex;
@@ -272,10 +274,12 @@ fieldset {
     grid-template-rows: 1fr 1fr;
     gap: 1rem;
   }
-  .section__imagenes--destacada {
+  .section__imagenes--destacada1 {
     grid-column: span 2;
     grid-row: 1/1;
     margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
   .section__imagenes--precios {
     padding-left: 20px;
@@ -390,17 +394,19 @@ fieldset {
 /* version mobile queda ya estructurada con los estilos anteriores */
 @media (min-width: 768px) {
   .section__imagenes--destacada {
+    grid-column: span 2;
+    grid-row: 1/1;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 50px;
+    margin-bottom: 150px;
   }
   .section__imagenes--crossfit {
     padding-left: 20px;
-    padding-bottom: 150px;
+    margin-bottom: 310px;
   }
   .section__imagenes--natacion {
     padding-right: 20px;
-    padding-bottom: 150px;
+    margin-bottom: 310px;
   }
 }
 /* :::::::::::::::::::PAGINA PLANES Y PRECIOS::::::::::::::::: */
@@ -520,7 +526,8 @@ fieldset {
 .contacto__label {
   color: white;
   padding-top: 1rem;
-  margin: auto auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 .contacto_form {
   display: flex;
@@ -530,6 +537,14 @@ fieldset {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0.5rem;
+}
+.contacto__centrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contacto__h2 {
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

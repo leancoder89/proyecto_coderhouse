@@ -5,6 +5,7 @@
     display: none;
 }
 
+
 @media(min-width: 768px) {
     .img__responsive {
         display: block;
@@ -52,7 +53,8 @@
     &__label {
         color: $color-b;
         padding-top: 1rem;
-        margin: auto auto;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     &_form {
@@ -64,4 +66,14 @@
         margin-right: auto;
         margin-bottom: 0.5rem;
     }
+    &__centrado {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      }
+
+      &__h2{
+        margin-bottom: 1rem;
+      }
 }

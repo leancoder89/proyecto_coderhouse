@@ -50,10 +50,12 @@
         grid-template-rows: 1fr 1fr;
         gap: 1rem;
 
-        &--destacada {
+        &--destacada1 {
             grid-column: span 2;
             grid-row: 1/1;
             margin-bottom: 20px;
+            padding-left: 20px;
+        padding-right: 20px;
         }
 
         &--precios {
