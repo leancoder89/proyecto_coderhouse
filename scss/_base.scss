@@ -33,9 +33,10 @@ p {
 a {
     text-decoration: none;
 
-    &:hover {
+    &:hover:not(h1) {
         background-color: $color-r;
         color: $color-n;
+        
     }
 }
 
