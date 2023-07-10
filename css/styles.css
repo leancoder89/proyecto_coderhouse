@@ -80,21 +80,18 @@ body {
   height: 50px;
   padding: 1em;
 }
-
-.menu {
+.nav .menu {
   display: flex;
   flex-direction: row;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-.menu > li {
+.nav .menu > li {
   margin: 0 1rem;
   overflow: hidden;
 }
-
-.menu__btn--estetica {
+.nav .menu__btn--estetica {
   display: none;
   height: 100%;
   width: 30px;
@@ -103,14 +100,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-#menu-variacion {
+.nav #menu-variacion {
   display: none;
 }
-
-.menu__btn,
-.menu__btn::before,
-.menu__btn::after {
+.nav .menu__btn,
+.nav .menu__btn::before,
+.nav .menu__btn::after {
   display: block;
   background-color: white;
   position: absolute;
@@ -119,71 +114,56 @@ body {
   transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 2px;
 }
-
-.menu__btn::before {
+.nav .menu__btn::before {
   content: "";
   margin-top: -8px;
 }
-
-.menu__btnn::after {
+.nav .menu__btn::after {
   content: "";
   margin-top: 8px;
 }
-
-#menu-variacion:checked + .menu__btn--estetica .menu__btn::before {
+.nav #menu-variacion:checked + .menu__btn--estetica .menu__btn::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
-
-#menu-variacione:checked + .menu__btn--estetica .menu__btn {
+.nav #menu-variacion:checked + .menu__btn--estetica .menu__btn {
   background: black;
 }
-
-#menu-variacion:checked + .menu__btn--estetica .menu__btn::after {
+.nav #menu-variacion:checked + .menu__btn--estetica .menu__btn::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-
 @media (max-width: 1024px) {
-  .menu__btn--estetica {
+  .nav .menu__btn--estetica {
     display: flex;
   }
-  .menu {
+  .nav .menu {
     position: absolute;
-    top: 0;
-    margin-top: 50px;
+    top: 50px;
     left: 0;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 300ms ease-in-out;
   }
-  #menu-variacion ~ .menu li {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  #menu-variacion:checked ~ .menu li {
-    border: 1px solid black;
-    height: 2.5em;
-    padding: 0.5em;
-    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .menu > li {
+  .nav .menu > li {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    background-color: black;
-  }
-  .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
+  .nav #menu-variacion:checked ~ .menu {
+    transform: scaleY(1);
+  }
 }
+
 /* ................FOOTER...................... */
 .footer {
   display: grid;
