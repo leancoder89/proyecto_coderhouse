@@ -9,7 +9,6 @@
     a {
         text-decoration: none;
         color: $color-r;
-        display: flex;
     }
 
     /*............................ SECTION.................................. */
@@ -27,7 +26,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
         width: 100vw;
-        height: 10vh;
+        height: 20vh;
     }
 }
 
@@ -53,9 +52,8 @@
         &--destacada1 {
             grid-column: span 2;
             grid-row: 1/1;
-            margin-bottom: 20px;
             padding-left: 20px;
-        padding-right: 20px;
+            padding-right: 20px;
         }
 
         &--precios {
@@ -64,6 +62,7 @@
 
         &--freeclass {
             padding-right: 20px;
+
         }
     }
 
@@ -74,11 +73,17 @@
     /* * ................................IFRAME ................................* */
     // se agrega iframe de la ciudad de rosario. no aparece el marcador rojo en el mapa ya que el local no existe, es inventado.
 
-    iframe {
-        margin-top: 40px;
-        margin-bottom: 10px;
-        width: 100vw;
-        height: 20vh;
-        max-width: 1300px;
-    }
+
+}
+
+h2.titulo__principal {
+    font-family: $font-s;
+    padding-left: 20px;
+}
+
+iframe {
+    margin-bottom: 10px;
+    width: 100vw;
+    height: 20vh;
+    max-width: 1200px;
 }

@@ -19,24 +19,22 @@ ul {
 
 img {
     width: 100%;
-    height: 100%;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
 p {
     color: $color-b;
-    margin-bottom: 2rem;
     font-size: 1.2rem;
 }
 
 a {
     text-decoration: none;
 
-    &:hover:not(h1) {
+    &:hover {
         background-color: $color-r;
         color: $color-n;
-        
+
     }
 }
 
@@ -54,11 +52,12 @@ h1 {
 h2 {
     font-family: $font-ss;
     color: $color-b;
+    margin-bottom: 2rem;
+}
 
-    &.freeclass {
-        color: $color-b;
-        margin-bottom: 2rem;
-    }
+h3 {
+    font-family: $font-ss;
+    color: $color-b;
 }
 
 .color__black {
@@ -74,8 +73,8 @@ h2 {
 }
 
 .main__maxwhidt {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto auto;
 }
 
 body {
