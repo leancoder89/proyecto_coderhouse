@@ -72,6 +72,17 @@ body {
   background-color: black;
 }
 
+input {
+  outline: 2px solid red;
+}
+input::placeholder {
+  color: black;
+}
+
+textarea {
+  outline: 2px solid red;
+}
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -325,7 +336,7 @@ iframe {
   align-items: center;
   margin: auto auto;
   margin-bottom: 7rem;
-  width: 180px;
+  width: 130px;
   border: 2px solid;
   border-radius: 1rem;
   height: 2.5rem;

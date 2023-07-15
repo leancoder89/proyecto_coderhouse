@@ -80,3 +80,15 @@ h3 {
 body {
     background-color: $color-n;
 }
+
+input{
+   outline: 2px solid $color-r;
+
+   &::placeholder{
+    color: $color-n;
+   }
+}
+
+textarea{
+    outline: 2px solid $color-r;
+}
