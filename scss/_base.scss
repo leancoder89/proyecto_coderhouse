@@ -34,7 +34,6 @@ a {
     &:hover {
         background-color: $color-r;
         color: $color-n;
-
     }
 }
 
@@ -53,7 +52,7 @@ h2 {
     font-family: $font-ss;
     color: $color-b;
     margin-bottom: 2rem;
-    text-shadow: 10px 10px 5px $color-r;
+    text-shadow: 10px 10px 5px grey;
 }
 
 h3 {
@@ -82,14 +81,14 @@ body {
     background-color: $color-n;
 }
 
-input{
-   outline: 2px solid $color-r;
+input {
+    outline: 2px solid $color-r;
 
-   &::placeholder{
-    color: $color-n;
-   }
+    &::placeholder {
+        color: $color-n;
+    }
 }
 
-textarea{
+textarea {
     outline: 2px solid $color-r;
 }
