@@ -11,6 +11,7 @@
         rel="stylesheet">
     <meta name="description"
         content="Natación, gimnasio y crossfit. Mejora tu fuerza y técnica. Encuentra un box cercano. Alcanza tus metas de bienestar.">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/styles.css">
     <title>THE EDGE FITNESS: Activa y enérgica | Fitness, Gimnasio, Crossfit y Natación cerca</title>
 </head>
@@ -41,7 +42,7 @@
 
             <div class="section__imagenes--destacada">
                 <h3 class="color__white">GIMNASIO</h3>
-                <img class="section__imagenes--tamaño" src="../imagenes/edgeint.jpg"
+                <img data-aos="flip-left" class="section__imagenes--tamaño" src="../imagenes/edgeint.jpg"
                     alt="imagen del area de musculacion del gimnasio">
                 <!-- en el texto de abajo iria una pequeña descripcion de los beneficios del gimnasio -->
                 <p>Nuestro gimnasio está equipado con una amplia gama de maquinaria de última generación para garantizar
@@ -53,7 +54,7 @@
             <div class="section__imagenes--crossfit">
                 <h3 class="color__white">CROSSFIT</h3>
                 <!-- en el texto iria una pequeña descripcion de los beneficios de realizar crossfit -->
-                <img class="section__imagenes--tamaño" src="../imagenes/crossfit-pelotaa.jpg"
+                <img data-aos="flip-left" class="section__imagenes--tamaño" src="../imagenes/crossfit-pelotaa.jpg"
                     alt="imagen de persona realizando crossfit">
                 <p>Si estás buscando un desafío físico y mental, nuestro programa de CrossFit es perfecto para ti.
                     Ofrecemos una amplia variedad de rutinas de entrenamiento de alta intensidad que incluyen
@@ -64,7 +65,7 @@
             <div class="section__imagenes--natacion">
                 <h3 class="color__white">NATATORIO</h3>
                 <!-- en el texto iria una pequeña descripcion de los beneficios de nadar -->
-                <img class="section__imagenes--tamaño" src="../imagenes/natatorio..jpeg"
+                <img data-aos="flip-left" class="section__imagenes--tamaño" src="../imagenes/natatorio..jpeg"
                     alt="imagen de la pileta de theedgefitness">
                 <p>Nuestras instalaciones de natación te ofrecen una experiencia refrescante y rejuvenecedora. Con una
                     piscina climatizada, podrás disfrutar de sesiones de natación relajantes o intensas. Ya sea que
@@ -107,7 +108,10 @@
             </div>
         </fieldset>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

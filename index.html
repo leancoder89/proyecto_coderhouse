@@ -12,7 +12,9 @@
     <meta name="description"
         content=
         "¡Bienvenidx a nuestro gimnasio! Encuentra rutinas, entrenamiento funcional y clases cerca. Mejora tu forma y fortalece tu cuerpo. ¡Comienza tu viaje saludable hoy!">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/styles.css">
+   
     <title>THE EDGE FITNESS: Estilo de vida saludable | Fitness en Rosario: Gimnasio, Crossfit y Natación</title>
 </head>
 
@@ -46,7 +48,7 @@
 
             <div class="section__imagenes--destacada1">
                 <h3 class="color__white">ACTIVIDADES</h3>
-                <a href="./pages/actividades.html"><img src="./imagenes/edgefitness-fachada.jpg"
+                <a href="./pages/actividades.html"><img data-aos="zoom-in" src="./imagenes/edgefitness-fachada.jpg"
                         alt="fachada del gimnasio"></a>
                 <strong><h2 id="quienes somos">QUIENES SOMOS</h2></strong>
                 <p>Somos un equipo apasionado de profesionales dedicados a ayudarte a alcanzar tus metas de acondicionamiento físico. Nuestra historia se basa en la creencia de que el ejercicio no solo es una actividad física, sino una forma de vida. Valoramos la salud, el bienestar y la superación personal. Estamos aquí para guiarte en cada paso del camino hacia una vida más activa y saludable. Únete a nosotros y descubre tu verdadero potencial.</p>
@@ -54,7 +56,7 @@
             </div>
             <div>
                 <h3 class="color__white section__precios">PLANES Y PRECIOS</h3>
-                <a href="./pages/planes-y-precios.html"><img
+                <a href="./pages/planes-y-precios.html"><img data-aos="zoom-in"
                         class="section__imagenes--precios section__imagenes--tamaño" src="./imagenes/crossfit-soga.jpg"
                         alt="persona haciendo actividad fisica con sogas mientras es observado por el entrenador"></a>
                 <p class="section__imagenes--precios">Explora nuestra variedad de planes diseñados para adaptarse a tus necesidades y presupuesto. En The Edge Fitness encontrarás la flexibilidad y los precios competitivos que buscas. 
@@ -64,7 +66,7 @@
             </div>
             <div>
                 <h3 class="color__white">FREECLASS</h3>
-                <a href="./pages/freeclass.html"><img class="section__imagenes--freeclass section__imagenes--tamaño"
+                <a href="./pages/freeclass.html"><img data-aos="zoom-in" class="section__imagenes--freeclass section__imagenes--tamaño"
                         src="./imagenes/edgeinterior.jpg" alt="imagen del interior del gimnasio"></a>
                 <p class="section__imagenes--freeclass">¡Experimenta nuestras clases gratuitas y descubre tu pasión por el fitness! Con nuestras Freeclass, tienes la oportunidad de probar diferentes estilos de entrenamiento. ¡Únete y descubre el mundo de posibilidades para alcanzar tus metas!</p>
 
@@ -111,7 +113,10 @@
             </div>
         </fieldset>
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 
 </html>

@@ -44,6 +44,7 @@ h2 {
   font-family: "Rubik", sans-serif;
   color: white;
   margin-bottom: 2rem;
+  text-shadow: 10px 10px 5px red;
 }
 
 h3 {
