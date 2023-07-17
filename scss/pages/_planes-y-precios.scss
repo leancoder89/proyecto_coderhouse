@@ -71,12 +71,12 @@
     margin-right: auto;
     text-align: center;
 }
-.img__responsive768{
+.img__responsive{
     display: none;
 }
 
 @media(min-width: 768px){
-    .img__responsive768{
+    .img__responsive{
         display: block;
     }
 
@@ -85,7 +85,7 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
 
-        &__img--responsive768{
+        &__img--responsive{
             width: 400px;
             height: 600px;
             display: grid;

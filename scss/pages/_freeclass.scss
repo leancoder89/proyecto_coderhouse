@@ -38,6 +38,7 @@
 
     &__camposobligatorios {
         grid-row: 6;
+        margin: auto auto;
     }
 }
 
@@ -47,7 +48,8 @@
     justify-content: center;
     align-items: center;
     margin: auto auto;
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
     width: 130px;
     border: 2px solid;
     border-radius: 1rem;
@@ -55,52 +57,60 @@
     font-size: 1.1rem
 }
 
+.img__responsive{
+    display: none;
+}
+
 /* .......................................MAIN............................... */
 
 @media(min-width: 768px) {
 
-    .contenedor {
+    .img__responsive{
+        display: block;
+    }
+
+    .freeclass{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(3, 1fr);
-        justify-items: center;
-        align-items: center;
-        margin-bottom: 5rem;
+        grid-template-rows: 1fr;
 
-        &__nombre {
+        &__img{
+            width: 400px;
+            height: 600px;
+            display: grid;
             grid-column: 1/1;
-            grid-row: 1/1;
-            width: 30%;
+            margin-left: 10vw;
+            margin-bottom: 20px;
         }
-
-        &__apellido {
-            grid-column: 1/1;
-            grid-row: 2/span 1;
-            width: 30%;
-        }
-
-        &__dni {
+    
+        &__informacion{
+            display: grid;
             grid-column: 2/2;
-            grid-row: 1/2;
-            width: 30%;
-        }
-
-        &__email {
-            grid-column: 2/2;
-            grid-row: 2/2;
-            width: 30%;
-        }
-
-        &__telefono {
-            grid-column: 1/1;
-            grid-row: 3;
-            width: 30%;
-        }
-
-        &__camposobligatorios {
-            grid-column: 2/2;
-            grid-row: 3;
-            margin-right: 15px;
+            grid-row: 1;
+            margin: auto auto;
         }
     }
+
+   
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        // margin-right: 50%;
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+        width: 130px;
+        border: 2px solid;
+        border-radius: 1rem;
+        height: 2.5rem;
+        font-size: 1.1rem
+    }
+
+    .contenedor__camposobligatorios{
+        margin-left: 50px;
+    }
+    
 }

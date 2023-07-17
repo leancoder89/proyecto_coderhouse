@@ -328,6 +328,7 @@ iframe {
 }
 .contenedor__camposobligatorios {
   grid-row: 6;
+  margin: auto auto;
 }
 
 .btn {
@@ -336,7 +337,8 @@ iframe {
   justify-content: center;
   align-items: center;
   margin: auto auto;
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
   width: 130px;
   border: 2px solid;
   border-radius: 1rem;
@@ -344,45 +346,50 @@ iframe {
   font-size: 1.1rem;
 }
 
+.img__responsive {
+  display: none;
+}
+
 /* .......................................MAIN............................... */
 @media (min-width: 768px) {
-  .contenedor {
+  .img__responsive {
+    display: block;
+  }
+  .freeclass {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    justify-items: center;
+    grid-template-rows: 1fr;
+  }
+  .freeclass__img {
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-column: 1/1;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+  }
+  .freeclass__informacion {
+    display: grid;
+    grid-column: 2/2;
+    grid-row: 1;
+    margin: auto auto;
+  }
+  .btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
-  }
-  .contenedor__nombre {
-    grid-column: 1/1;
-    grid-row: 1/1;
-    width: 30%;
-  }
-  .contenedor__apellido {
-    grid-column: 1/1;
-    grid-row: 2/span 1;
-    width: 30%;
-  }
-  .contenedor__dni {
-    grid-column: 2/2;
-    grid-row: 1/2;
-    width: 30%;
-  }
-  .contenedor__email {
-    grid-column: 2/2;
-    grid-row: 2/2;
-    width: 30%;
-  }
-  .contenedor__telefono {
-    grid-column: 1/1;
-    grid-row: 3;
-    width: 30%;
+    margin-left: 50px;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    width: 130px;
+    border: 2px solid;
+    border-radius: 1rem;
+    height: 2.5rem;
+    font-size: 1.1rem;
   }
   .contenedor__camposobligatorios {
-    grid-column: 2/2;
-    grid-row: 3;
-    margin-right: 15px;
+    margin-left: 50px;
   }
 }
 /* :::::::::::::::::::::::PAGINA ACTIVIDADES:::::::::::::::::::::: */
@@ -475,12 +482,12 @@ iframe {
   text-align: center;
 }
 
-.img__responsive768 {
+.img__responsive {
   display: none;
 }
 
 @media (min-width: 768px) {
-  .img__responsive768 {
+  .img__responsive {
     display: block;
   }
   .planes {
@@ -488,7 +495,7 @@ iframe {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
   }
-  .planes__img--responsive768 {
+  .planes__img--responsive {
     width: 400px;
     height: 600px;
     display: grid;
