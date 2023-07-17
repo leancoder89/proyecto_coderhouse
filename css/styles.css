@@ -446,15 +446,6 @@ iframe {
   margin-bottom: 30px;
 }
 
-.horarios {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  max-width: 420px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 .plan__gimnasio {
   grid-row: 2;
 }
@@ -475,6 +466,43 @@ iframe {
   grid-row: 6;
 }
 
+.horarios {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.img__responsive768 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .img__responsive768 {
+    display: block;
+  }
+  .planes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .planes__img--responsive768 {
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-column: 2/2;
+    margin-left: 10vw;
+    margin-bottom: 20px;
+  }
+  .planes__informacion {
+    display: grid;
+    grid-column: 1/1;
+    grid-row: 1;
+    margin: auto auto;
+  }
+}
 /* ::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::: */
 /* ........................MAIN............................ */
 .img__responsive {
@@ -510,7 +538,7 @@ iframe {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-.contacto_informacion {
+.contacto__informacion {
   display: grid;
   grid-column: 1/1;
   grid-row: 1;
