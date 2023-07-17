@@ -84,20 +84,21 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
+
+        &__img--responsive768{
+            width: 400px;
+            height: 600px;
+            display: grid;
+            grid-column: 2/2;
+            margin-left: 10vw;
+            margin-bottom: 20px;
+        }
+        &__informacion{
+            display: grid;
+            grid-column: 1/1;
+            grid-row: 1;
+            margin: auto auto;
+        }
     }
-    .planes__img--responsive768{
-        width: 400px;
-        height: 600px;
-        display: grid;
-        grid-column: 2/2;
-        // margin-right: 10vw;
-        margin-left: 10vw;
-        margin-bottom: 20px;
-    }
-    .planes__informacion{
-        display: grid;
-        grid-column: 1/1;
-        grid-row: 1;
-        margin: auto auto;
-    }
+ 
 }
