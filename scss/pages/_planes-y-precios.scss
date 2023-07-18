@@ -1,5 +1,7 @@
 /* :::::::::::::::::::PAGINA PLANES Y PRECIOS::::::::::::::::: */
 
+// ---------------------aplicacion de estilos generales-------------------
+
 .planA {
     display: grid;
     grid-row: 3;
@@ -75,6 +77,8 @@
     display: none;
 }
 
+/* .......................................MAIN version tablet y desktop............................... */
+
 @media(min-width: 768px){
     .img__responsive{
         display: block;
@@ -100,5 +104,4 @@
             margin: auto auto;
         }
     }
- 
-}
+ }

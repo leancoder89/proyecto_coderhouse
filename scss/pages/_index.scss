@@ -1,45 +1,38 @@
-/* ------------------------INDEX--------------------------------------------- */
+/* ----------------------------------INDEX--------------------------------------------- */
 
-/*...................APLICACION DE ESTILOS VERSION MOBILE................... */
+/*...................APLICACION DE ESTILOS GENERALES................... */
 
-@media(max-width:768px) {
+    // -----------------------------MAIN--------------------------------------
 
-    /* ....................H1 Y BARRA DE NAVEGACION .........................*/
-
-    a {
-        text-decoration: none;
-        color: $color-r;
+    h2.titulo__principal {
+        font-family: $font-s;
+        padding-left: 20px;
     }
 
-    /*............................ SECTION.................................. */
+        /*............................ SECTION.................................. */
 
-    .section__imagenes {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 1rem;
-    }
+        .section__imagenes {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+    
 
     /* .............................IFRAME.................................. */
+       // se agrega iframe de la ciudad de rosario. no aparece el marcador rojo en el mapa ya que el gimnasio no existe, es inventado.
 
     iframe {
         margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         width: 100vw;
         height: 20vh;
+        max-width: 1200px;
     }
-}
 
-/*................. APLICACION DE ESTILOS VERSION DESKTOP.................... */
-
-/*.................... h1 y barra de navegacion................................ */
+/*................. APLICACION DE ESTILOS VERSION TABLET Y DESKTOP.................... */
 
 @media(min-width: 768px) {
-
-    a {
-        text-decoration: none;
-        color: $color-r;
-    }
 
     /* ...................................SECTION .............................*/
 
@@ -69,21 +62,7 @@
     .section__precios {
         margin-left: 20px;
     }
-
-    /* * ................................IFRAME ................................* */
-    // se agrega iframe de la ciudad de rosario. no aparece el marcador rojo en el mapa ya que el local no existe, es inventado.
-
-
 }
 
-h2.titulo__principal {
-    font-family: $font-s;
-    padding-left: 20px;
-}
 
-iframe {
-    margin-bottom: 10px;
-    width: 100vw;
-    height: 20vh;
-    max-width: 1200px;
-}
+

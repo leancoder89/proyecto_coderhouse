@@ -24,6 +24,7 @@ p {
 
 a {
   text-decoration: none;
+  color: red;
 }
 a:hover {
   background-color: red;
@@ -229,36 +230,32 @@ fieldset {
   grid-row: span 2;
 }
 
-/* ------------------------INDEX--------------------------------------------- */
-/*...................APLICACION DE ESTILOS VERSION MOBILE................... */
-@media (max-width: 768px) {
-  /* ....................H1 Y BARRA DE NAVEGACION .........................*/
-  a {
-    text-decoration: none;
-    color: red;
-  }
-  /*............................ SECTION.................................. */
-  .section__imagenes {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    gap: 1rem;
-  }
-  /* .............................IFRAME.................................. */
-  iframe {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100vw;
-    height: 20vh;
-  }
+/* ----------------------------------INDEX--------------------------------------------- */
+/*...................APLICACION DE ESTILOS GENERALES................... */
+h2.titulo__principal {
+  font-family: "Bacasime Antique", serif;
+  padding-left: 20px;
 }
-/*................. APLICACION DE ESTILOS VERSION DESKTOP.................... */
-/*.................... h1 y barra de navegacion................................ */
+
+/*............................ SECTION.................................. */
+.section__imagenes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+/* .............................IFRAME.................................. */
+iframe {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 100vw;
+  height: 20vh;
+  max-width: 1200px;
+}
+
+/*................. APLICACION DE ESTILOS VERSION TABLET Y DESKTOP.................... */
 @media (min-width: 768px) {
-  a {
-    text-decoration: none;
-    color: red;
-  }
   /* ...................................SECTION .............................*/
   .section__imagenes {
     display: grid;
@@ -281,20 +278,7 @@ fieldset {
   .section__precios {
     margin-left: 20px;
   }
-  /* * ................................IFRAME ................................* */
 }
-h2.titulo__principal {
-  font-family: "Bacasime Antique", serif;
-  padding-left: 20px;
-}
-
-iframe {
-  margin-bottom: 10px;
-  width: 100vw;
-  height: 20vh;
-  max-width: 1200px;
-}
-
 /* ------------------------------PAGINA FREECLASS----------------------------- */
 /* ...................................MAIN.................................... */
 .contenedor {
@@ -350,7 +334,7 @@ iframe {
   display: none;
 }
 
-/* .......................................MAIN............................... */
+/* .......................................MAIN version tablet y desktop............................... */
 @media (min-width: 768px) {
   .img__responsive {
     display: block;
@@ -394,7 +378,7 @@ iframe {
 }
 /* :::::::::::::::::::::::PAGINA ACTIVIDADES:::::::::::::::::::::: */
 /* ------------------------------SECTION-------------------------- */
-/* version mobile de actividades queda ya estructurada con los estilos del index. Se reutilizan etiquetas. por este motivo no puedo anidar estas 3 etiquetas */
+/* version general de actividades queda ya estructurada con los estilos del index. Se reutilizan etiquetas. por este motivo no puedo anidar estas 3 etiquetas */
 @media (min-width: 768px) {
   .section__imagenes--destacada {
     grid-column: span 2;
@@ -486,6 +470,7 @@ iframe {
   display: none;
 }
 
+/* .......................................MAIN version tablet y desktop............................... */
 @media (min-width: 768px) {
   .img__responsive {
     display: block;
@@ -510,36 +495,8 @@ iframe {
     margin: auto auto;
   }
 }
-/* ::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::: */
-/* ........................MAIN............................ */
-.img__responsive {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .img__responsive {
-    display: block;
-  }
-  .contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-  .contacto__img {
-    width: 400px;
-    height: 600px;
-    display: grid;
-    grid-column: 2/2;
-    margin-right: 10vw;
-    margin-bottom: 20px;
-  }
-  .contacto__informacion {
-    display: grid;
-    grid-column: 1/1;
-    grid-row: 1;
-    margin: auto auto;
-  }
-}
+/* :::::::::::::::::::::::::::: PAGINA CONTACTO::::::::::::::::::::::::::::::: */
+/* ...................................MAIN............................... */
 .contacto {
   display: grid;
   grid-template-columns: 1fr;
@@ -576,6 +533,35 @@ iframe {
 }
 .contacto__h2 {
   margin-bottom: 1rem;
+}
+
+.img__responsive {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .img__responsive {
+    display: block;
+  }
+  .contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  .contacto__img {
+    width: 400px;
+    height: 600px;
+    display: grid;
+    grid-column: 2/2;
+    margin-right: 10vw;
+    margin-bottom: 20px;
+  }
+  .contacto__informacion {
+    display: grid;
+    grid-column: 1/1;
+    grid-row: 1;
+    margin: auto auto;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
